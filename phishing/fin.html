@@ -34,58 +34,73 @@
                 margin-bottom: 70px;
                 width: 50%;
                 font-size: 20px;             
-            }
-            .box {
-                display: grid;
-                grid-template-columns: 2fr 2fr;
-                grid-column: auto;
-                grid-gap: 30px;
-            }
-            .box-middleLeft {
-                text-align: center; 
+            }           
+            .box-middleTop {
+                max-width: 70%;
                 font-family: Arial, Helvetica, sans-serif;
-                font-size: 18px;
-                float: left;
-                margin-left: 15px;
+                font-size: 18px;          
+                margin-left: 200px;
                 height: auto;
                 background-color: #f0f5fc;
                 padding: 15px;
-                position: relative;
+                padding-left: 20px;         
                 overflow: hidden;
             }
-            .box-middleRight {
-                text-align: center; 
+            .box-middleTop2 {
+                max-width: 70%;
                 font-family: Arial, Helvetica, sans-serif;
-                font-size: 18px;
-                height: 800px;
+                font-size: 18px;   
+                margin-top: 20px;       
+                margin-left: 200px;
+                height: auto;
                 background-color: #f0f5fc;
                 padding: 15px;
-                margin-right: 15px;
-                float: right;
+                padding-left: 20px;         
+                overflow: hidden;
             }
+
+            .box-middleTop3 {
+                max-width: 70%;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 18px;   
+                margin-top: 20px;       
+                margin-left: 200px;
+                height: auto;
+                background-color: #f0f5fc;
+                padding: 15px;
+                padding-left: 20px;         
+                overflow: hidden;
+            }
+            .box-middleTop4 {
+                max-width: 70%;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 18px;   
+                margin-top: 20px;       
+                margin-left: 200px;
+                height: auto;
+                background-color: #f0f5fc;
+                padding: 15px;
+                padding-left: 20px;         
+                overflow: hidden;
+            }          
             .box-middleBottom {
                 text-align: center; 
                 font-family: Arial, Helvetica, sans-serif;
                 padding: 8px;     
-                margin: auto;            
-                margin-bottom: 50px;
+                margin: auto;           
                 width: 50%;
                 font-size: 18px;  
             }
-       
-            #epostImg {
-                /*width: 30%;
-                height: 15%; */
-                margin-left: 40%;
+            #ops {
+                font-size: 30px;
+            }
+            #ops2 {
+                font-size: 24px;
             }
             .responsive {
-                width: 50%;
+                width: 30%;
                 height: auto;
             } 
-
-            iframe {
-                margin: 0 auto;
-            }
 
         </style>
     </head>
@@ -95,14 +110,16 @@
         <![endif]-->
         <div class="header">
             <div class="header-photo">
-                <img src="/images/Oslo-logo-hvit-RGB.png" height="175px" width="240px">
+                <img src="Oslo-logo-hvit-RGB.png" height="175px" width="240px">
             </div>
             <h2>Phishing-øvelse september 2023</h2>
         </div>
 
         <div class="info">
-            <h2>Heisann!</h2>
-            <p>Du har nettopp deltatt i en phishing-øvelse for ledere. Øvelsen er gjennomført av Oslo kommunes CSIRT-team og FIN i anledning Sikkerhetsmåneden. Nedenfor gir vi deg informasjon om testen og hvordan du kan 
+            <div id="ops"><p>Ooops..</p></div>
+            <div id="ops2"><p>Her gikk det nok litt fort i svingene!</p></div> <br>
+                <p>Du har nettopp deltatt i en phishing-øvelse, planlagt og gjennomført av Oslo kommunes CSIRT-team og FIN i anledning Sikkerhetsmåneden. 
+                    Nedenfor gir vi deg informasjon om testen og hvordan du kan 
                 avdekke phishing-forsøk i fremtiden.
                 <p>Påloggingsinformasjonen din har <b>IKKE</b> blitt lagret.<br>
                 Statistikk som kan identifisere enkeltpersoner blir <b>IKKE</b> ført.
@@ -110,61 +127,60 @@
         </div>
 
 
-        <!--<div id="epostImg">
-            <img src="epost.jpg" width="50%" height="25%" >
-        </div> 
-        <iframe name="opinionstage-widget" src="https://www.opinionstage.com/api/v2/widgets/6a9689d6-3002-4e4a-b184-1b5a0c1778ef/iframe" data-opinionstage-iframe="6a9689d6-3002-4e4a-b184-1b5a0c1778ef" width="50%" height="800" scrolling="auto" style="border: none;" frameBorder="0" allow="fullscreen" webkitallowfullscreen="true" mozallowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        Kommenterer ut meningsmåling fra opinion stage for nå.
-        !-->
-        <div class="box">
-            <div class="box-middleLeft">
-                <h3>Røde flagg</h3>
-                <p>I denne øvelsen har vi valgt å fokusere på <b>kontekst</b>. Ved hjelp av kunstig 
-                intelligens og andre verktøy er det ikke lenger vanskelig for angripere å lage gode phishing-eposter på ulike språk, og vi må derfor lære oss andre metoder 
-                for å gjenkjenne phishing.<br>
-                Etter denne testen ønsker vi at du videre har kontekst litt i bakhodet når du blir bedt om å trykke på en link i en e-post. <br>
-                Pleier du å få e-poster fra denne avsenderen? Er det vanlig at slik informasjon kommer på mail, eller får du vanligvis denne informasjonen fra lederen din eller andre?
-                </br><br>
-                Det er også noen andre røde flagg i e-posten som kan være fine å kjenne til: </p>
-                    <img src="/images/domenenavn2.jpg" class="responsive">  
-                <p>E-poster fra Oslo kommune kommer vanligvis fra en e-postadresse som ender med "oslo.kommune.no", derfor
-                    bør man reagere dersom en e-post fra noen som utgir seg for å være fra kommunen, kommer fra et annet domene.</p>
-                    <img src="/images/link3.jpg" class="responsive">            
-                <p>Et annet rødt flagg er linken i e-posten. Ved å holde musepekeren over "Logg inn"-knappen ser vi hvor denne linken 
-                        fører oss. Vi ville forventet at den skulle ta oss direkte til HR-systemet, men ser at den går til en nettside som
-                        heter oslo.kommuneweb.com. Her er det noe som skurrer!</p>                
-            </div>
-
-            <div class="box-middleRight">
-                <h3>Hvorfor tester vi?</h3>
-                <p>Vi i CSIRT jobber med å ivareta sikkerheten til Oslo kommune i det digitale domenet, men vi trenger din hjelp til å gjøre det. <br>
-                Den letteste måten for en angriper å bryte seg inn i en organisasjon er ved å lure mennesker til å gi fra seg sensitive opplysninger, 
-                som f.eks påloggingsinformasjonen til din arbeidskonto.     
-                </br><br>
-                Ved å eksponere Oslo kommunes ansatte for phishing-øvelser gjør vi dere bedre rustet til å håndtere fremtidige phishing-forsøk, ved at 
-                dere kjenner til angrepsmetodikken og hvilke faktorer som bør sjekkes nøye ved fremtidige phishing-forsøk. <br>
-                <br>Har du spørsmål vedrørende denne testen kan disse rettes til CSIRT (csirt@oslo.kommune.no), eller Martine Åsheim (PISK) martine.asheim@uke.oslo.kommune.no.         
-                <h3>Report phishing</h3>
-                <p>I Outlook finnes det en knapp hvor du kan rapportere e-poster som du syntes er mistenkelige. Ved å bruke denne funksjonen sendes e-posten 
-                til oss i CSIRT, hvor vi vurderer e-postens innhold. Dette hjelper oss med å identifisere pågående kampanjer, og det hjelper Outlook med å automatisk 
-                filtrere ut lignende e-poster i fremtiden. Knappen finnes oppe til høyre i Outlook, under "Hjem"-fanen, og ser slik ut:<br></p>
-                <div class="ReportPhishingImage">
-                    <img src="/images/report2.jpg" height="150px" width="100px" >
-                </div> 
-            </div>
+       <!-- <div class="box"> -->
+        <div class="box-middleTop">
+            <h3>Hvorfor testes du?</h3>
+            <p>I denne øvelsen ønsket vi å fokusere på deg som leder med personalansvar som mål. Ledere har ofte tilgang til mer
+                sensitiv informasjon enn deres ansatte, og er dermed et mer interessant mål for angripere. 
+                Sikkerhetsmåneden er rett rundt hjørnet, så vi ønsker også at alle har ekstra fokus på digital sikkerhet i denne tiden. Kanskje
+                var dette en vekker for deg? 
+            </p><br>
         </div>
 
+        <div class="box-middleTop2">
+        <h4>Noen røde flagg</h4>             
+            <p>E-poster fra Oslo kommune kommer vanligvis fra en e-postadresse som ender med "oslo.kommune.no", denne kom fra oslo.kommuneweb.com.</p>
+            <img src="domenenavn2.jpg" class="responsive">         
+            <p>Et annet rødt flagg er linken i e-posten. Ved å holde musepekeren over "Logg inn"-knappen ser vi hvor denne linken 
+                fører oss. Vi ville forventet at den skulle ta oss direkte til HR-systemet, men ser at den går til en nettside som
+                heter oslo.kommuneweb.com. Her er det noe som skurrer!
+            </p>     
+            <img src="link3.jpg" class="responsive">
+            <br><br>  
+        </div>   
+
+        <div class="box-middleTop3">
+        <h4>Hvorfor tester vi?</h4> 
+            <p>Den enkleste måten for en angriper å bryte seg inn i en organisasjon er ved å lure mennesker til å gi fra seg sensitive opplysninger, som f.eks påloggingsinformasjonen til din arbeidskonto.
+                Phishing-øvelser er en metode for å skape bevisstgjøring rundt disse angrepene, som også gir ansatte en mulighet til å trene på rett respons til mistenkelige e-poster. 
+            </p>
+            <br> 
+        </div>
+    
+        <div class="box-middleTop4">
+        <h4>Report phishing</h4>
+            <p>I Outlook finnes det en knapp hvor du kan rapportere e-poster som du syntes er mistenkelige. Da videresendes e-posten til Oslo kommune CSIRT, som vurderer e-postens innhold. Dette hjelper CSIRT å identifisere pågående kampanjer, og det hjelper Outlook med å automatisk 
+                filtrere ut lignende e-poster i fremtiden. Knappen finnes oppe til høyre i Outlook, under "Hjem"-fanen, og ser slik ut:
+                <br>
+            </p>
+            <img src="report2.jpg" height="150px" width="100px" >
+        </div> 
+        <br><br>
+           
+
         <div class="box-middleBottom">
+
             <h2>Er du usikker, still spørsmål!</h2>
-                <b>Kontekst:</b> Pleier avsender å kontakte meg på denne måten? Burde ikke lederen min (eller andre) informert om dette?  <br>
-                <b>Avsender:</b> Hvem er det som egentlig sendte e-posten? Hva slags adresse er @oslo.kommuneweb.com? Og hvorfor slutter adressen med <i>.com</i>?<br>
-                <b>Kort tidsfrist: </b>Hvorfor så kort tidsfrist? Det virker urimelig...<br>
-                <b>Sjekk lenken: </b>Hold musepekeren over lenken, hvor tar egentlig lenken deg?</p>
+                <b>Kontekst:</b> Angripere har begrenset med informasjon om målet, dermed kan svindel-e-poster komme i en rar kontekst. <br>
+                <b>Avsender:</b> E-posten kommer ofte fra en avsenderadresse som ikke er forfalsket - her kan du enkelt avsløre svindelen!<br>
+                <b>Kort tidsfrist: </b> Angripere kan bruke kort tidsfrist som en stressfaktor. <br>
+                <b>Sjekk linken: </b>Hold musepekeren over linken, da kommer webadressen opp. <br>
+                <b>Sjekk webadressen: </b> Er adressen feilstavet, eller slutter den på .com istedet for .no, etc. <br> 
                 <p>Er du fremdeles usikker anbefaler vi at du besøker nettstedet direkte i nettleseren fremfor å trykke på linken, da får du sjekket om 
                 det faktisk er en viktig melding til deg i systemet uten noen sporing fra e-posten. 
                 </p>
         </div>
     </div>
-    <img src="/images/SMND-banner-23.png">
+    <img src="SMND-banner-23.png" width="100%" height="auto">
     </body>
 </html>
