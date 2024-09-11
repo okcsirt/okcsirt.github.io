@@ -7,40 +7,62 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
+            /* General Body Styles */
             body {
                 min-height: 100vh;
                 display: flex;
                 flex-direction: column;
+                margin: 0;
+                padding: 0;
             }
+
+            /* Header adjustments */
             .header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
                 font-family: Arial, Helvetica, sans-serif;
                 padding: 20px;
-                text-align: center;
                 background: #07b18f;
                 color: white;
-                font-size: 25px;
             }
+
             .header-photo img {
-                max-width: 100%;
+                max-width: 100px; /* Reduce logo size on desktop */
                 height: auto;
+                margin-right: 20px; /* Add spacing between the logo and the text */
             }
+
+            .header h2 {
+                flex-grow: 1;
+                font-size: 22px; /* Reduce header text size */
+                text-align: center;
+                margin: 0;
+            }
+
+            /* Info Section */
             .info {
-                text-align: center; 
+                text-align: center;
                 font-family: Arial, Helvetica, sans-serif;
-                padding: 8px;     
+                padding: 8px;
                 margin: auto;
                 margin-top: 30px;
                 margin-bottom: 70px;
-                width: 50%;
-                font-size: 20px;             
+                width: 80%;
+                font-size: 20px;
             }
+
+            /* Box Layout */
             .box {
                 display: grid;
-                grid-template-columns: 2fr 2fr;
+                grid-template-columns: 1fr 1fr;
                 grid-gap: 30px;
+                margin: 20px auto;
+                width: 80%;
             }
+
             .box-middleLeft, .box-middleRight {
-                text-align: center; 
+                text-align: center;
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 18px;
                 background-color: #f0f5fc;
@@ -48,22 +70,29 @@
                 position: relative;
                 overflow: hidden;
             }
+
             .box-middleRight {
-                height: auto; /* Remove fixed height */
+                height: auto;
             }
+
+            /* Responsive Images */
             img {
                 max-width: 100%;
                 height: auto;
             }
+
+            /* Bottom Box */
             .box-middleBottom {
-                text-align: center; 
+                text-align: center;
                 font-family: Arial, Helvetica, sans-serif;
-                padding: 8px;     
-                margin: auto;            
+                padding: 8px;
+                margin: auto;
                 margin-bottom: 50px;
-                width: 50%;
-                font-size: 18px;  
+                width: 80%;
+                font-size: 18px;
             }
+
+            /* Footer Styles */
             .Footer {
                 font-family: Arial, Helvetica, sans-serif;
                 padding: 10px;
@@ -74,28 +103,36 @@
                 font-size: 15px;
             }
 
-            /* Responsive Design */
+            /* Mobile adjustments */
             @media (max-width: 768px) {
-                .box {
-                    grid-template-columns: 1fr; /* Switch to one column on small screens */
-                    grid-gap: 15px;
-                }
                 .header {
-                    font-size: 20px;
+                    flex-direction: column;
+                    text-align: center;
                 }
-                .info, .box-middleLeft, .box-middleRight, .box-middleBottom {
+
+                .header-photo img {
+                    max-width: 80px; /* Reduce logo size further on mobile */
+                    margin-bottom: 15px;
+                }
+
+                .header h2 {
+                    font-size: 18px; /* Smaller font size on mobile */
+                    padding-right: 0;
+                }
+
+                .info, .box-middleBottom {
                     font-size: 16px;
+                    width: 90%;
                 }
+
+                .box {
+                    grid-template-columns: 1fr; /* Switch to one column layout on mobile */
+                    grid-gap: 15px;
+                    width: 90%;
+                }
+
                 .Footer {
                     font-size: 14px;
-                }
-                .box-middleLeft, .box-middleRight {
-                    margin: 0 10px; /* Reduce side margins */
-                    float: none;
-                }
-                .box-middleBottom {
-                    margin-bottom: 30px;
-                    width: 90%;
                 }
             }
         </style>
@@ -119,40 +156,39 @@
             <p>Påloggingsinformasjonen din har <b>IKKE</b> blitt lagret.<br>
             Statistikk som kan identifisere enkeltpersoner blir <b>IKKE</b> ført.</p>
         </div>
-        
+
         <div class="box">
             <div class="box-middleLeft">
                 <h3>Røde flagg</h3>
                 <p>I denne øvelsen har vi valgt å fokusere på <b>kontekst</b>. Ved hjelp av kunstig 
                 intelligens og andre verktøy er det ikke lenger vanskelig for angripere å lage gode phishing-eposter på ulike språk, og vi må derfor lære oss andre metoder 
                 for å gjenkjenne phishing.<br>
-                Etter denne testen ønsker vi at du videre har kontekst litt i bakhodet når du blir bedt om å trykke på en link i en e-post. <br>
-                Pleier du å få e-poster fra denne avsenderen? Er det vanlig at slik informasjon kommer på mail, eller får du vanligvis slik informasjon fra lederen din eller andre?</br><br>
-                Det er også noen andre røde flagg i e-posten som kan være fine å kjenne til: </p>
-                <img src="/images/domenenavn_org1.jpg" alt="Example of domain name" class="responsive">  
+                Etter denne testen ønsker vi at du videre har kontekst litt i bakhodet når du blir bedt om å trykke på en link i en e-post.<br>
+                Pleier du å få e-poster fra denne avsenderen? Er det vanlig at slik informasjon kommer på mail, eller får du vanligvis slik informasjon fra lederen din eller andre?<br>
+                Det er også noen andre røde flagg i e-posten som kan være fine å kjenne til:</p>
+                <img src="/images/domenenavn_org1.jpg" alt="Example of domain name" class="responsive">
                 <p>E-poster fra Oslo kommune kommer vanligvis fra en e-postadresse som ender med "oslo.kommune.no", derfor
                     kan man gjerne stusse litt dersom en e-post fra noen som utgir seg for å være fra kommunen kommer fra et annet domene.</p>
-                <img src="/images/link_org1.jpg" alt="Example of phishing link" class="responsive">            
+                <img src="/images/link_org1.jpg" alt="Example of phishing link" class="responsive">
                 <p>Et annet rødt flagg er linken i e-posten. Ved å holde musepekeren over "Bytt passord"-lenken ser vi at denne lenken 
-                        fører deg til det falske domenet oficeneces.com</p>                
+                        fører deg til det falske domenet oficeneces.com</p>
             </div>
 
             <div class="box-middleRight">
                 <h3>Hvorfor tester vi?</h3>
-                <p>Vi i c123 jobber med å ivareta sikkerheten til Oslo kommune i det digitale domenet, men vi trenger din hjelp til å gjøre det. <br>
+                <p>Vi i c123 jobber med å ivareta sikkerheten til Oslo kommune i det digitale domenet, men vi trenger din hjelp til å gjøre det.<br>
                 Den letteste måten for en angriper å bryte seg inn i en organisasjon er ved å lure mennesker til å gi fra seg sensitive opplysninger, 
-                som f.eks påloggingsinformasjonen til din arbeidskonto.     
-                </p><br>
+                som f.eks påloggingsinformasjonen til din arbeidskonto.</p>
                 <p>Ved å eksponere Oslo kommunes ansatte for phishing-tester gjør vi dere bedre rustet til å håndtere fremtidige phishing-forsøk, ved at 
-                dere kjenner til angrepsmetodikken og hvilke faktorer som bør sjekkes nøye ved fremtidige phishing-forsøk. <br><br>
-                Har du spørsmål vedrørende denne testen kan disse rettes til c123 eller informasjonssikkerhetskoordinator i din virksomhet.</p>         
+                dere kjenner til angrepsmetodikken og hvilke faktorer som bør sjekkes nøye ved fremtidige phishing-forsøk.<br>
+                Har du spørsmål vedrørende denne testen kan disse rettes til c123 eller informasjonssikkerhetskoordinator i din virksomhet.</p>
                 <h3>Report phishing</h3>
                 <p>I Outlook finnes det en knapp hvor du kan rapportere e-poster som du syntes er mistenkelige. Ved å bruke denne funksjonen sendes e-posten 
                 til oss i c123, hvor vi vurderer e-postens innhold. Dette hjelper oss med å identifisere pågående kampanjer, og det hjelper Outlook med å automatisk 
-                filtrere ut lignende e-poster i fremtiden.<br></p>
+                filtrere ut lignende e-poster i fremtiden.</p>
                 <div class="ReportPhishingImage">
                     <img src="/images/report.jpg" alt="Report phishing button in Outlook" class="responsive">
-                </div> 
+                </div>
             </div>
         </div>
 
@@ -160,15 +196,15 @@
             <h2>Er du usikker, still spørsmål!</h2>
             <p><b>Kontekst:</b> Pleier avsender å kontakte meg på denne måten? Burde ikke lederen min (eller andre) informert om dette?<br>
                 <b>Avsender:</b> Hvem er det som egentlig sendte e-posten? Hva slags adresse er @oslo.kommuneweb.com? Og hvorfor slutter adressen med <i>.com</i>?<br>
-                <b>Kort tidsfrist: </b>Hvorfor så kort tidsfrist? Det virker urimelig...<br>
-                <b>Sjekk lenken: </b>Hold musepekeren over lenken, hvor tar egentlig lenken deg?</p>
+                <b>Kort tidsfrist:</b> Hvorfor så kort tidsfrist? Det virker urimelig...<br>
+                <b>Sjekk lenken:</b> Hold musepekeren over lenken, hvor tar egentlig lenken deg?</p>
             <p>Er du fremdeles usikker anbefaler vi at du besøker nettstedet direkte i nettleseren fremfor å trykke på linken, da får du sjekket om 
                 det faktisk er en viktig melding til deg i systemet uten noen sporing fra e-posten.</p>
         </div>
-        
+
         <div class="Footer">
             <h3>Lurer du på noe?</h3>
             <p>Kontakt oss i c123 på c123@oslo.kommune.no</p>
-        </div> 
+        </div>
     </body>
 </html>
