@@ -7,7 +7,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-            /* General Body Styles */
             body {
                 min-height: 100vh;
                 display: flex;
@@ -16,7 +15,6 @@
                 padding: 0;
             }
 
-            /* Header adjustments */
             .header {
                 display: flex;
                 align-items: center;
@@ -28,19 +26,18 @@
             }
 
             .header-photo img {
-                max-width: 150px; /* Reduce logo size on desktop */
+                max-width: 150px; 
                 height: auto;
-                margin-right: 20px; /* Add spacing between the logo and the text */
+                margin-right: 20px; 
             }
 
             .header h2 {
                 flex-grow: 1;
-                font-size: 30px; /* Reduce header text size */
-                text-align: center;
+                font-size: 30px; 
+                text-align: center;z
                 margin: 0;
             }
 
-            /* Info Section */
             .info {
                 text-align: center;
                 font-family: Arial, Helvetica, sans-serif;
@@ -52,7 +49,6 @@
                 font-size: 20px;
             }
 
-            /* Box Layout */
             .box {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -75,13 +71,11 @@
                 height: auto;
             }
 
-            /* Responsive Images */
             img {
                 max-width: 100%;
                 height: auto;
             }
 
-            /* Bottom Box */
             .box-middleBottom {
                 text-align: center;
                 font-family: Arial, Helvetica, sans-serif;
@@ -92,7 +86,6 @@
                 font-size: 18px;
             }
 
-            /* Footer Styles */
             .Footer {
                 font-family: Arial, Helvetica, sans-serif;
                 padding: 10px;
@@ -103,7 +96,6 @@
                 font-size: 15px;
             }
 
-            /* Mobile adjustments */
             @media (max-width: 768px) {
                 .header {
                     flex-direction: column;
@@ -111,12 +103,12 @@
                 }
 
                 .header-photo img {
-                    max-width: 100px; /* Reduce logo size further on mobile */
+                    max-width: 100px;
                     margin-bottom: 15px;
                 }
 
                 .header h2 {
-                    font-size: 20px; /* Smaller font size on mobile */
+                    font-size: 20px; 
                     padding-right: 0;
                 }
 
@@ -126,7 +118,7 @@
                 }
 
                 .box {
-                    grid-template-columns: 1fr; /* Switch to one column layout on mobile */
+                    grid-template-columns: 1fr; 
                     grid-gap: 15px;
                     width: 90%;
                 }
