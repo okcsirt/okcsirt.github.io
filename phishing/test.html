@@ -38,70 +38,51 @@
                 margin: 0;
             }
 
-            .info {
-                text-align: center;
-                font-family: Arial, Helvetica, sans-serif;
-                padding: 8px;
-                margin: auto;
-                margin-top: 30px;
-                margin-bottom: 70px;
-                width: 80%;
-                font-size: 20px;
-            }
-
-            .box {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-                grid-gap: 30px;
-                margin: 20px auto;
-                width: 80%;
-            }
-
-            .box-middleLeft, .box-middleRight, .box-middleBottom, .box-middleTop2  {
-                text-align: left;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 18px;
-                background-color: #f0f5fc;
-                padding: 15px;
-                position: relative;
-                overflow: hidden;
-            }
-         
-
-            .box-middleLeft h3, .box-middleRight h3, .box-middleBottom h3, .box-middleTop2 h3 {
+.info {
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    width: 80%;
+    font-size: 20px;
 }
 
-            .box-middleRight {
-                height: auto;
-            }
+.box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Two equal-width columns */
+    grid-template-rows: 1fr 1fr;     /* Two equal-height rows */
+    grid-gap: 30px;                  /* Space between the boxes */
+    margin: 20px auto;
+    width: 80%;
+}
 
-            img {
-                max-width: 100%;
-                height: auto;
-            }
+.box-middleLeft, .box-middleRight, .box-middleBottom, .box-middleTop2 {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background-color: #f0f5fc;
+    padding: 15px;                  /* Uniform padding */
+    position: relative;
+    overflow: hidden;
+    margin: 0;                      /* Remove inconsistent margins */
+    width: 100%;                    /* Ensure each box takes full grid cell */
+}
 
-            .box-middleBottom {
-                text-align: left;
-                font-family: Arial, Helvetica, sans-serif;
-                padding: 8px;
-                margin: auto;
-                margin-bottom: 50px;
-                width: 80%;
-                font-size: 18px;
-            }
+.box-middleLeft h3, .box-middleRight h3, .box-middleBottom h3, .box-middleTop2 h3 {
+    text-align: center;             /* Align headings to center */
+}
 
-              .box-middleTop2 {
-                text-align: left;
-                font-family: Arial, Helvetica, sans-serif;
-                padding: 8px;
-                background-color: #f0f5fc;
-                margin: auto;
-                margin-bottom: 50px;
-                width: 80%;
-                font-size: 18px;
-            }
+.box-middleRight, .box-middleBottom, .box-middleTop2 {
+    height: auto;                   /* Allow boxes to adjust height automatically */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
             .Footer {
                 font-family: Arial, Helvetica, sans-serif;
