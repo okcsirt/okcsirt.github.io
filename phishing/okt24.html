@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Phishing-øvelse - Oslo kommune</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+            }
+
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 20px;
+                background: #034B45;
+                color: white;
+            }
+
+            .header-photo img {
+                max-width: 150px; 
+                height: auto;
+                margin-right: 20px; 
+            }
+
+            .header h2 {
+                flex-grow: 1;
+                font-size: 30px; 
+                text-align: center;z
+                margin: 0;
+            }
+
+            .info {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 8px;
+                margin: auto;
+                margin-top: 30px;
+                margin-bottom: 70px;
+                width: 80%;
+                font-size: 20px;
+            }
+
+            .box {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 30px;
+                margin: 20px auto;
+                width: 80%;
+            }
+
+            .box-middleLeft, .box-middleRight, .box-middleBottom, .box-middleTop  {
+                text-align: left;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 18px;
+                background-color: #f0f5fc;
+                padding: 15px;
+                position: relative;
+                overflow: hidden;
+            }
+         
+
+            .box-middleLeft h3, .box-middleRight h3, .box-middleBottom h3, .box-middleTop h3 {
+    text-align: center;
+}
+
+            .box-middleRight {
+                height: auto;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .box-middleBottom {
+                text-align: left;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 8px;
+                margin: auto;
+                margin-bottom: 50px;
+                width: 80%;
+                font-size: 18px;
+            }
+
+              .box-middleTop {
+                text-align: left;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 8px;
+                background-color: #f0f5fc;
+                margin: auto;
+                margin-bottom: 50px;
+                width: 80%;
+                font-size: 18px;
+            }
+
+            .Footer {
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 10px;
+                text-align: center;
+                background: #034B45;
+                color: white;
+                margin-top: auto;
+                font-size: 15px;
+            }
+
+            @media (max-width: 768px) {
+                .header {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .header-photo img {
+                    max-width: 100px;
+                    margin-bottom: 15px;
+                }
+
+                .header h2 {
+                    font-size: 20px; 
+                    padding-right: 0;
+                }
+
+                .info, .box-middleBottom {
+                    font-size: 16px;
+                    width: 90%;
+                }
+
+                .box {
+                    grid-template-columns: 1fr; 
+                    grid-gap: 15px;
+                    width: 90%;
+                }
+
+                .Footer {
+                    font-size: 14px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<div class="header">
+<div class="header-photo">
+<img src="/images/Oslo-logo-hvit-RGB.png" alt="Oslo logo">
+</div>
+<h2>Phishing-øvelse - Oktober 2024</h2>
+</div>
+ 
+        <div class="info">
+<h2>Ojda, her gikk det litt fort i svingene!</h2>
+<p>Du har nettopp deltatt i en phishing-øvelse gjennomført av Oslo kommune CSIRT og FIN i anledning Sikkerhetsmåneden. Nedenfor følger informasjon om testen og hvordan du kan bli bedre til å avdekke phishing-forsøk i fremtiden.
+</p>
+<p>Påloggingsinformasjonen din har <b>IKKE</b> blitt lagret. Statistikken blir kun brukt på virksomhetsnivå.<br>
+<p><b>Som en del av øvelsen ønsker vi at du gjennomfører opplæringsaktiviteten som ligger på <a href=https://felles.intranett.oslo.kommune.no/informasjonssikkerhet-og-personvern/kompetanse/e-laringer-om-informasjonssikkerhet-og-personvern/sikkerhetsmaneden/>intranettet.</a><br></b>
+</div>
+ 
+        <div class="box">
+<div class="box-middleLeft">
+<h3>Hvordan kunne eposten blitt oppdaget?</h3>
+<p>Det er ofte flere kjennetegn som kan avsløre phishing-forsøk. I denne testen ble noen av de mest typiske brukt.</p>
+<li>Avsenderadresse med ukjent domene</li>
+<img src="/images/fromaddress2.png" class="responsive">
+<li>Kort tidsfrist for å beholde viktige tilganger</li>
+<img src="/images/passord-utloper1.png" class="responsive">
+<li>Link som peker til et ukjent nettsted</li>
+<img src="/images/url.png" class="responsive"> 
+<li>Forespørsel om å oppgi brukernavn og passord</li>
+<img src="/images/login-ms.png" class="responsive"> 
+</div>
+ 
+            <div class="box-middleRight">               
+<h3>Hvordan rapportere phishing-forsøk?</h3>
+<p>Hvis du oppdager eller mistenker et phishing-forsøk ønsker vi at det rapporteres. Rapportering utføres ved å klikke på knappen "Report Phishing" i Outlook. Rapporteringen vil hjelpe CSIRT med å oppdage og forhindre angrep.</p>
+<div class="ReportPhishingImage">
+<img src="/images/report-phish1.png" alt="Report phishing button in Outlook" class="responsive">
+</div>
+</div>
+</div>
+ 
+ 
+        <div class="box">
+<div class="box-middleLeft">
+<h3>Er du i tvil? Still spørsmål og dobbeltsjekk!</h3>
+<p>Ondsinnede eposter kommer i mange forskjellige varianter, men har ofte fellestrekk som det er nyttig å være oppmerksom på.</p>
+<ul>
+<p><b>Spørsmål om konfidensiell informasjon:</b> Ikke oppgi konfidensiell informasjon uten at du er sikker på at du kan stole på avsender.<br></p>
+<p><b>Hastverk</b> Ofte spiller angripere på at det haster med å få deg til å utføre en handling (f.eks. tilbakestille passord eller bestille et gavekort).<br></p>
+<p><b>Ukjent avsender:</b> Ring avsender eller sjekk med en kollega hvis du er usikker på om vedkommende er den hen utgir seg for å være.<br></p>
+<p><b>Usikker på lenke eller vedlegg?</b> Les <a href="https://norsis.no/veiledninger/er-lenken-trygg/">denne</a> artikkelen fra Norsis for gode tips til å vurdere lenker og vedlegg i e-post.</p>
+</ul>
+</div>
+<div class="box-middleRight">               
+<h3>Hvorfor tester vi?</h3>
+<p>Phishing-øvelser er et av flere tiltak for å forhindre angrep over e-post. Effektene vi ønsker å oppnå:</p>
+<ul>
+<li>Bedre kunne måle effektiviteten av opplæringstiltak</li>
+<li>Bedre tilpasning av opplæringstiltak</li>
+<li>Økt andel som rapporterer mistenkelig e-post</li>
+<li>Økt oppmerksomhet og generell bevisstgjøring rundt temaet</li>
+</div>
+</div>
+<div class="Footer">
+<h3>Har du spørsmål til øvelsen?</h3>
+<p>Kontakt CSIRT på csirt@oslo.kommune.no</p>
+</div>
+</body>
+</html>
